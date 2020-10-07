@@ -2,6 +2,7 @@ package youtube_sub_dl
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -151,4 +152,12 @@ func (y *YoutubeDownloader) download() (*etree.Element, error) {
 	}
 	return doc.SelectElement("transcript"), nil
 
+}
+
+func Download(url string) (*Subtitle, error) {
+	y, err := NewYoutubeDownloader("http://youtu.be/5MgBikgcWnY")
+	if err != nil {
+		log.Fatal(err)
+	}
+	return y.Download()
 }

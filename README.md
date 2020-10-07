@@ -14,7 +14,7 @@ func main(){
     if err != nil {
         log.Fatal(err)
     }
-    for _, line := range subtitle.Line {
+    for _, line := range subtitle.Lines {
         // fmt.Println(line.Start, line.End, line.Text)
     }
 }
