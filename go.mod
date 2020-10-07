@@ -1,4 +1,4 @@
-module youtube_sub_dl
+module github.com/jameshwc/Youtube-Subtitle-Downloader
 
 go 1.15
 
